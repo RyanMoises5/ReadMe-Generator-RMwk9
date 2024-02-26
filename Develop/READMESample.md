@@ -1,24 +1,23 @@
-# Project Title: sfghdsh6hsh ![License](https://img.shields.io/badge/License-EPL_2.0-blue)
+# Project Title: fghdjt 
 
 ## Description
-    i6e568usujdtj
-    
+gdhjdyj
+
 ## Install
-    dtjdgjfxgfj
-    
+dghjmdgyj
+
 ## Usage
-    td6u5e68iydk
-    
+dtjgj
+
 ## Contributing
-    thdfjgnghdk7uo
-    
+dtyjd
+
 ## Testing
-    dtjkdghkmdgx
+jhjm
 
 ## License
-    This project uses the EPL_2.0 license. Find more information about this license by clicking [HERE]().
-
+This project has no licenses, and reproduction and distribution of this project is prohibited.
 ## Questions
-    Find the author's works [HERE](https://github.com/hjrsjhgdhk.
+Find the author's works [HERE](https://github.com/dtyjds).
  
-    Direct any questions to d7dtijkykh.
+Direct any questions to ghjm.

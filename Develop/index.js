@@ -68,7 +68,6 @@ const questions = [title, description, install, usage, contributing, tests, user
 
 // TODO: Create a function to write README file
 function writeToFile(fileName, response) {
-  const { title, description, install, usage, contribute, tests, userGitHub, userEmail } = response
   fs.writeFile(
     fileName,
     generateMarkdown(response),
@@ -84,5 +83,4 @@ function init() {
     })
 }
 
-// Function call to initialize app
 init();
