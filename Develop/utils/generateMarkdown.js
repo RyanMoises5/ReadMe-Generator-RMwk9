@@ -1,7 +1,7 @@
 function renderLicenseBadge(license) {
   let badgeString = "";
   if (license!=='No License') {
-    badgeString = `[![License](https://img.shields.io/badge/License-${license}-blue)]`
+    badgeString = `![License](https://img.shields.io/badge/License-${license}-blue)`
   }
   return badgeString;
 }
@@ -58,35 +58,34 @@ function renderLicenseLink(license) {
 // TODO: Create a function that returns the license section of README
 // If there is no license, return an empty string
 function renderLicenseSection(license) {
-  let licenseSection = "";
+  let licenseSection = "\n\n## License\n";
   if (license !=='No License') {
-    licenseSection = `## License\nThis project uses the ${license} license. Find more information about this license by clicking [HERE](` + renderLicenseLink(license) + ').\n';
+    licenseSection += `    This project uses the ${license} license. Find more information about this license by clicking [HERE](` + renderLicenseLink(license) + ').\n';
   } else {
-    licenseSection = "This project has no licenses, and reproduction and distribution of this project is prohibited."
+    licenseSection += "    This project has no licenses, and reproduction and distribution of this project is prohibited."
   }
   return licenseSection;
 }
 
-// TODO: Create a function to generate markdown for README
 function generateMarkdown(data) {
   let markDown = 
-    `# Project Title: ${data.title}` + renderLicenseBadge(license) + '\n' +
-    `## Description\n
-    ${data.description}\n
-    ## Install\n
-    ${data.install}\n
-    ## Usage \n
-    ${data.usage}\n
-    ## Contributing\n
-    ${data.contributing}\n
-    ## Testing\n
-    ${data.tests}\n` +
-    renderLicenseSection(license) +
-    `## Questions\n
+    `# Project Title: ${data.title} ` + renderLicenseBadge(data.license) +
+    `\n\n## Description
+    ${data.description}
+    \n## Install
+    ${data.install}
+    \n## Usage
+    ${data.usage}
+    \n## Contributing
+    ${data.contributing}
+    \n## Testing
+    ${data.tests}` +
+    renderLicenseSection(data.license) +
+    `\n## Questions
     Find the author's works [HERE](https://github.com/${data.userGitHub}.\n 
     Direct any questions to ${data.userEmail}.`
 
   return markDown;
 }
 
-module.exports = generateMarkdown(data);
+module.exports = generateMarkdown;

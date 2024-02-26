@@ -24,7 +24,7 @@ const usage = {
 }
 const contributing = {
   type: 'input',
-  name: 'contribute',
+  name: 'contributing',
   message: "Enter contributing guidelines",
 }
 const tests = {
@@ -48,18 +48,18 @@ const license = {
   message: "What license do you want for your project?",
   choices: [
     'No License',
-    'Apache-2.0', 
-    'GPL-3.0', 
+    'Apache_2.0', 
+    'GPL_3.0', 
     'MIT', 
-    'BSD-2-Clause', 
-    'BSD-3-Clause', 
-    "BSL-1.0", 
-    "CC0-1.0", 
-    "EPL-2.0", 
-    "AGPL-3.0",
-    "GPL-2.0",
-    "LGPL-2.1",
-    "MPL-2.0",
+    'BSD_2_Clause', 
+    'BSD_3_Clause', 
+    "BSL_1.0", 
+    "CC0_1.0", 
+    "EPL_2.0", 
+    "AGPL_3.0",
+    "GPL_2.0",
+    "LGPL_2.1",
+    "MPL_2.0",
     "Unilicense"
     ]
   }
@@ -71,7 +71,7 @@ function writeToFile(fileName, response) {
   const { title, description, install, usage, contribute, tests, userGitHub, userEmail } = response
   fs.writeFile(
     fileName,
-    `README + ${title},${description}`,
+    generateMarkdown(response),
     (err) => err ? console.log(err) : console.log('Success!')
     )
 };
@@ -81,7 +81,6 @@ function init() {
   inquirer.prompt(questions)
     .then((response) => {
       writeToFile("READMESample.md", response);
-      generateMarkdown(response);
     })
 }
 
