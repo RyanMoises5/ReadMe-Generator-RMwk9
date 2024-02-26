@@ -1,3 +1,5 @@
+// Build string to show license badge on README
+
 function renderLicenseBadge(license) {
   let badgeString = "";
   if (license!=='No License') {
@@ -5,6 +7,8 @@ function renderLicenseBadge(license) {
   }
   return badgeString;
 }
+
+// Finds license link depending on license choice
 
 function renderLicenseLink(license) {
   let linkString = "";
@@ -55,6 +59,8 @@ function renderLicenseLink(license) {
   return linkString;
 }
 
+// Edits License section depending on license choice
+
 function renderLicenseSection(license) {
   let licenseSection = "\n\n## License\n";
   if (license !=='No License') {
@@ -64,6 +70,8 @@ function renderLicenseSection(license) {
   }
   return licenseSection;
 }
+
+// Generates README text from prompt responses
 
 function generateMarkdown(data) {
 
@@ -95,5 +103,7 @@ Direct any questions to ${data.userEmail}.
 `
   return markDown;
 }
+
+// Exports functions into index.js
 
 module.exports = generateMarkdown;

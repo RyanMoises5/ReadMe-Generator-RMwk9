@@ -1,6 +1,10 @@
+// Imports
+
 const inquirer = require('inquirer');
 const fs = require('fs');
 const generateMarkdown = require('./utils/generateMarkdown.js')
+
+// Questions to appear on node.js prompt
 
 const title = {
   type: 'input',
@@ -66,6 +70,8 @@ const license = {
 
 const questions = [title, description, install, usage, contributing, tests, userGitHub, userEmail, license];
 
+// Function to generate README.md file
+
 function writeToFile(fileName, response) {
   fs.writeFile(
     fileName,
@@ -74,10 +80,14 @@ function writeToFile(fileName, response) {
     )
 };
 
+// Asks qustions, then uses those questions to write the file
+
 function init() {
   inquirer
     .prompt(questions)
     .then((response) => writeToFile(`README-${response.title}.md`, response));
 }
+
+// App initialization
 
 init();
