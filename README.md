@@ -1,5 +1,7 @@
 # 09 Node.js Challenge: Professional README Generator Completion
 
+Student: Ryan Moises
+
 ## Objective
 
 To create an professional README file generator using a command-line application
@@ -32,16 +34,18 @@ WHEN I click on the links in the Table of Contents
 THEN I am taken to the corresponding section of the README
 ```
 
-## URLs and Images
+## URLs, Images, Videos
 
 <!-- The following link is the student's URL to the completed assignment:
 (https://ryanmoises5.github.io/Weather-Dashboard-RMwk6/) -->
 
 The following link is the Github repository where the associated files are located:
-(https://github.com/RyanMoises5/ReadMe-Generator-RMwk9)
 
-<!-- ![Image of the Weather Dashboard](./Assets/WeatherDashboard.JPG) -->
-[Test](./Assets/Sample.webm)
+https://github.com/RyanMoises5/ReadMe-Generator-RMwk9
+
+![Image of the Weather Dashboard](./Assets/Sample.gif)
+
+Click [HERE](./Assets/Sample.webm) for the raw video showcasing how the app works
 
 ---
 
