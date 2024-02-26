@@ -45,7 +45,7 @@ The following link is the Github repository where the associated files are locat
 
 https://github.com/RyanMoises5/ReadMe-Generator-RMwk9
 
-![Image of the Weather Dashboard](./Assets/Sample.gif)
+![GIF of app in action](./Assets/Sample.gif)
 
 Click [HERE](./Assets/Sample.webm) for the raw video showcasing how the app works
 
