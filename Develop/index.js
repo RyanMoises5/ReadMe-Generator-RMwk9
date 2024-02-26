@@ -66,7 +66,6 @@ const license = {
 
 const questions = [title, description, install, usage, contributing, tests, userGitHub, userEmail, license];
 
-// TODO: Create a function to write README file
 function writeToFile(fileName, response) {
   fs.writeFile(
     fileName,
@@ -75,7 +74,6 @@ function writeToFile(fileName, response) {
     )
 };
 
-// TODO: Create a function to initialize app
 function init() {
   inquirer
     .prompt(questions)

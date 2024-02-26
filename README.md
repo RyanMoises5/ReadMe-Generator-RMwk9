@@ -4,7 +4,12 @@ Student: Ryan Moises
 
 ## Objective
 
-To create an professional README file generator using a command-line application
+To create an professional README file generator using a command-line application. The README will have sections for a description, a table of contents, installation, usage, licensing, contributing, tessting, and links to direct questions to the project.
+
+## Table of Contents
+* [User Story](#user-story)
+* [Acceptance Criteria](#acceptance-criteria)
+* [URLs, Images, Videos](#urls-images-videos)
 
 ## User Story
 
@@ -36,9 +41,6 @@ THEN I am taken to the corresponding section of the README
 
 ## URLs, Images, Videos
 
-<!-- The following link is the student's URL to the completed assignment:
-(https://ryanmoises5.github.io/Weather-Dashboard-RMwk6/) -->
-
 The following link is the Github repository where the associated files are located:
 
 https://github.com/RyanMoises5/ReadMe-Generator-RMwk9
@@ -46,6 +48,8 @@ https://github.com/RyanMoises5/ReadMe-Generator-RMwk9
 ![Image of the Weather Dashboard](./Assets/Sample.gif)
 
 Click [HERE](./Assets/Sample.webm) for the raw video showcasing how the app works
+
+A sample README can be viewed [HERE](./Develop/README-sample%20README.md)
 
 ---
 
