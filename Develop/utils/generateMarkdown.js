@@ -1,5 +1,3 @@
-// TODO: Create a function that returns a license badge based on which license is passed in
-// If there is no license, return an empty string
 function renderLicenseBadge(license) {
   let badgeString = "";
   if (license!=='No License') {
@@ -8,8 +6,6 @@ function renderLicenseBadge(license) {
   return badgeString;
 }
 
-// TODO: Create a function that returns the license link
-// If there is no license, return an empty string
 function renderLicenseLink(license) {
   let linkString = "";
   switch (license) {
@@ -62,15 +58,35 @@ function renderLicenseLink(license) {
 // TODO: Create a function that returns the license section of README
 // If there is no license, return an empty string
 function renderLicenseSection(license) {
-
+  let licenseSection = "";
+  if (license !=='No License') {
+    licenseSection = `## License\nThis project uses the ${license} license. Find more information about this license by clicking [HERE](` + renderLicenseLink(license) + ').\n';
+  } else {
+    licenseSection = "This project has no licenses, and reproduction and distribution of this project is prohibited."
+  }
+  return licenseSection;
 }
 
 // TODO: Create a function to generate markdown for README
 function generateMarkdown(data) {
-  renderLicenseBadge(data);
-  renderLicenseLink(data);
-  renderLicenseSection(data);
-  // return `# ${data.title}`;
+  let markDown = 
+    `# Project Title: ${data.title}` + badgeString + '\n' +
+    `## Description\n
+    ${data.description}\n
+    ## Install\n
+    ${data.install}\n
+    ## Usage \n
+    ${data.usage}\n
+    ## Contributing\n
+    ${data.contributing}\n
+    ## Testing\n
+    ${data.tests}\n` +
+    licenseSection +
+    `## Questions\n
+    Find the author's works [HERE](https://github.com/${data.userGitHub}.\n 
+    Direct any questions to ${data.userEmail}.`
+
+  return markDown;
 }
 
-module.exports = generateMarkdown;
+module.exports = generateMarkdown(data);

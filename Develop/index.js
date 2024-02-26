@@ -22,10 +22,10 @@ const usage = {
   name: 'usage',
   message: "Enter directions of how to use your project",
 }
-const contribute = {
+const contributing = {
   type: 'input',
   name: 'contribute',
-  message: "Enter contribution guidelines",
+  message: "Enter contributing guidelines",
 }
 const tests = {
   type: 'input',
@@ -64,7 +64,7 @@ const license = {
     ]
   }
 
-const questions = [title, description, install, usage, contribute, tests, userGitHub, userEmail, license];
+const questions = [title, description, install, usage, contributing, tests, userGitHub, userEmail, license];
 
 // TODO: Create a function to write README file
 function writeToFile(fileName, response) {
