@@ -42,8 +42,29 @@ const userEmail = {
   name: 'userEmail',
   message: "What is your email?",
 }
+const license = {
+  type: 'rawlist',
+  name: 'license',
+  message: "What license do you want for your project?",
+  choices: [
+    'No License',
+    'Apache-2.0', 
+    'GPL-3.0', 
+    'MIT', 
+    'BSD-2-Clause', 
+    'BSD-3-Clause', 
+    "BSL-1.0", 
+    "CC0-1.0", 
+    "EPL-2.0", 
+    "AGPL-3.0",
+    "GPL-2.0",
+    "LGPL-2.1",
+    "MPL-2.0",
+    "Unilicense"
+    ]
+  }
 
-const questions = [title, description, install, usage, contribute, tests, userGitHub, userEmail];
+const questions = [title, description, install, usage, contribute, tests, userGitHub, userEmail, license];
 
 // TODO: Create a function to write README file
 function writeToFile(fileName, response) {
@@ -59,7 +80,8 @@ function writeToFile(fileName, response) {
 function init() {
   inquirer.prompt(questions)
     .then((response) => {
-      writeToFile("README.md", response)
+      writeToFile("READMESample.md", response);
+      generateMarkdown(response);
     })
 }
 
